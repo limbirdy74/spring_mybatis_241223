@@ -9,6 +9,10 @@
 	<insert id="boardWriteDao">
 		INSERT INTO mvc_board(bname, btitle, bcontent, bhit) VALUES(#{param1},#{param2},#{param3},0)
 	</insert>
+	
+	<select id="boardListDao" resultType="com.jbedu.mybatis.dto.BoardDto">
+		SELECT * FROM mvc_board ORDER BY bnum DESC
+	</select>	
 
 
 
